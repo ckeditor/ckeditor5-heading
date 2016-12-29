@@ -50,6 +50,8 @@ describe( 'Heading', () => {
 			expect( dropdown.buttonView.isEnabled ).to.be.true;
 			expect( dropdown.buttonView.isOn ).to.be.undefined;
 			expect( dropdown.buttonView.label ).to.equal( 'Paragraph' );
+			expect( dropdown.buttonView.tooltip ).to.be.a.function;
+			expect( dropdown.buttonView.tooltip( 'foo' ) ).to.equal( 'Heading: foo' );
 		} );
 
 		it( 'should execute format command on model execute event', () => {

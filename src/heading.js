@@ -38,6 +38,8 @@ export default class Heading extends Plugin {
 		const command = editor.commands.get( 'heading' );
 		const formats = command.formats;
 		const collection = new Collection();
+		const t = editor.t;
+		const buttonLabel = t( 'Heading' );
 
 		// Add formats to collection.
 		for ( let format of formats ) {
@@ -49,8 +51,9 @@ export default class Heading extends Plugin {
 
 		// Create dropdown model.
 		const dropdownModel = new Model( {
-			label: 'Heading',
+			label: buttonLabel,
 			withText: true,
+			tooltip: label => `${ buttonLabel }: ${ label }`,
 			items: collection
 		} );
 
