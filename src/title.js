@@ -106,8 +106,10 @@ export default class Title extends Plugin {
 	/**
 	 * Returns the title of the document. Note, that because this plugin does not allow any formatting inside
 	 * the title element, the output of this method will be a plain text, with no HTML tags. However, it
-	 * may contain some markers, like comments or suggestions. In such case, a special tag for the
-	 * marker will be included in the title text.
+	 * may contain some markers, like
+	 * {@glink @ckeditor5 features/collaboration/comments/comments#comments-markup comments} or
+	 * {@glink @ckeditor5 features/collaboration/track-changes/track-changes#suggestions-markup suggestions}.
+	 * In such case, a special tag for the marker will be included in the title text.
 	 *
 	 * @returns {String} Title of the document.
 	 */
